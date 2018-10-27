@@ -25,3 +25,13 @@ t_statistic, p_value = ttest_1samp(data["ApplicantIncome"],5500)
 p_value
 from scipy.stats import ttest_rel
 t_statistic, p_value = stats.ttest_rel(data["Errors using typewriter"],data["Errors using a computer"])
+
+##correlation
+data[["Item_Weight","Item_MRP"]].corr()
+import matplotlib.pyplot as plt
+%matplotlib inline
+import seaborn as sns
+data.corr()
+cor = data.corr()
+plt.figure(figsize=(16,10))
+sns.heatmap(cor)
