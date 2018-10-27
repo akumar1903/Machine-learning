@@ -1,0 +1,58 @@
+###Installing python and setting up jupyter notebok for working.
+###Check the document attached.
+
+Installing Python
+ 
+Setting up your Machine
+We will be installing conda which is a package manager and supports a variety of languages but we will be using conda to install Python packages for this course. This course is built upon the Python 3 version. The installers for the three most common operating systems are provided below. Click on the link below to download the installer.
+Windows Installer
+MacOS Installer
+Linux Installer
+For Windows users:
+Download the installer from above.
+Download the Git Bash as a replacement for command prompt from here.  Open the installer and install it.
+Double-click the downloaded .exe file and accept defaults till Advanced Installation Options.  When on Advanced Installation Options, Select - Add Anaconda to my path Environment variable
+Open Git Bash from the search option and type conda update conda.
+If the above steps does not work, you can follow the below mentioned steps to use jupyter notebook:
+Download the Anaconda from this link : https://www.anaconda.com/download/#download
+Once downloaded, install anaconda.
+Go to Start Menu and type Anaconda Navigator
+In Anaconda Navigator, click on Launch Jupyter Notebook buttom.
+For MacOS users:
+Download the installer from above.
+Open the terminal and go to the directory where you downloaded the installer and type- bash Miniconda3-latest-MacOSX-x86_64.sh
+Once the installation completes, type conda update conda.
+For Linux users:
+Download the installer from above.
+Open a new terminal using ctrl+Alt+T and go to the directory where you downloaded the Anaconda installer.
+ In terminal type- bash Miniconda3-latest-Linux-x86_64.sh
+Creating a Virtual Environment and Installing Anaconda
+For the purpose of this course, we will be creating a new virtual environment where we will be installing the Anaconda Distribution which contains the most commonly used Python packages used in Data Science. Windows users should open Git Bash, OSX and Linux users should open their terminal windows.
+To create a new environment and install Anaconda alongside it, type- conda create -n av python=3 anaconda    #Here av is the name of the environment we just created. You #can name it anything
+Type y to accept the installation of packages.
+To check whether the environment was created type- conda env list
+You should see the list of all environments currently on your system with the active environment marked with a (*)
+To start working in the newly created environment, type- source activate av
+To check the list of packages installed in the current environment, type conda list
+To come out of the current working environment, type source deactivate av
+Checking if everything works
+If everything was installed correctly, then you should be able to run Jupyter Notebook successfully. A Jupyter Notebook is a tool that will help us in doing interactive Data Science on a browser. To do so-
+Windows users:
+Click Start and type Git Bash
+Inside the Bash terminal type- jupyter notebook 
+To close the Jupyter Notebook type Ctrl+c.
+ 
+MacOS and Linux users:
+Open terminal.
+Type jupyter notebook
+To close the Jupyter Notebook type Ctrl+c.
+  If everything worked correctly, you should be able to see something like below in your browser.   Now, you have all the required tools for starting your Data Science journey. In case, you are an advanced user or someone who wants to know and play around with Anaconda then visit this link.
+Installing packages inside the environment
+There is one method that we will use to download the packages in our environment
+conda
+We will see both these methods to install a sample package inside our already created environment av. Open Git Bash(Windows) and terminal(OSX and LINUX) Follow the instructions below-
+Activate the av environment by typing- source activate av
+We will now install a package called numpy conda install numpy( highly recommended)
+In case conda cannot find a package that you are looking for, use- pip install numpy Note- using pip and conda together can create conflict in the packages, so we recommend to use only conda for installing and removing packages.
+Getting familiar with Jupyter Notebook
+Read this awesome article by Sebastian to get acquainted with Jupyter Notebook and its environment.  
