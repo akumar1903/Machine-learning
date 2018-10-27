@@ -1,0 +1,28 @@
+###try this in jupyter notebook
+
+import pandas as pd
+histogram = pd.read_csv("C:/Users/arunk01/Desktop/Analytics Vidhya/Python/data_python.csv", encoding = "ISO-8859-1")
+histogram.head()
+import matplotlib.pyplot as plt
+%matplotlib inline
+plt.hist(x="ApplicantIncome",data=histogram)
+plt.show()
+plt.hist(x="ApplicantIncome",data=histogram, bins = 30)
+plt.show()
+
+###Mean, Median, Mode, Variance and Standard Deviation
+
+import pandas as pd
+df = pd.read_csv("C:/Users/arunk01/Desktop/Analytics Vidhya/Python/data_python.csv", encoding = "ISO-8859-1")
+df.head()
+df_mean = df["ApplicantIncome"].mean()
+print(df_mean)
+df_mode = df["ApplicantIncome"].mode()
+print(df_mode)
+df_median = df["ApplicantIncome"].median()
+print(df_median)
+df_variance = df["ApplicantIncome"].var(ddof=0)
+print(df_variance)
+###ddof = 1 for sample and ddof=0 for population; You will observe small difference in the output value
+df_std = df["ApplicantIncome"].std(ddof=0)
+print(df_std)
