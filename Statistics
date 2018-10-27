@@ -1,0 +1,27 @@
+p_value
+t_statistic, p_value = ttest_ind(data["Errors using typewriter"],data["Errors using a computer"][0:14], equal_var=false)
+
+### Chi Squared Test
+
+import pandas as pd
+import numpy as np
+import scipy.stats as stats
+from scipy.stats import chisquare
+
+data = pd.read_csv ("C:/Users/arunk01/Desktop/Analytics Vidhya/Python/data_python.csv", encoding = "ISO-8859-1")
+data
+t_statistic, p_value = chisquare(f_obs=data["Observed"], f_exp = data['Expected'])
+p_value
+
+#### t tests
+import scipy.stats as stats
+from scipy.stats import ttest_1samp
+data = pd.read_csv("C:/Users/arunk01/Desktop/Analytics Vidhya/Python/data_python.csv", encoding = "ISO-8859-1")
+data.head()
+data["ApplicantIncome"].mean()
+data["ApplicantIncome"].mean()
+from scipy.stats import ttest_1samp
+t_statistic, p_value = ttest_1samp(data["ApplicantIncome"],5500)
+p_value
+from scipy.stats import ttest_rel
+t_statistic, p_value = stats.ttest_rel(data["Errors using typewriter"],data["Errors using a computer"])
