@@ -35,3 +35,27 @@ data.corr()
 cor = data.corr()
 plt.figure(figsize=(16,10))
 sns.heatmap(cor)
+
+###Histogram plotting
+
+import matplotlib.pyplot as plt
+%matplotlib inline
+import seaborn as sns
+# plot histogram for 'Item_Outlet_Sales'
+plt.hist(mydata['Item_Outlet_Sales'])
+plt.show()
+
+# increadse no. of bins to 20
+plt.hist(mydata['Item_Outlet_Sales'], bins=20)
+plt.show()
+
+# frequency table of 'Outlet_Type'
+mydata['Outlet_Type'].value_counts()
+
+
+##2 sample independent t-tests
+
+# 2 sample independent t-test 
+from scipy import stats
+from scipy.stats import ttest_rel
+t_statistic, p_value = stats.ttest_ind(mydata['Item_Outlet_Sales'][mydata['Outlet_Type'] == 'Supermarket Type2'], mydata['Item_Outlet_Sales'][mydata['Outlet_Type'] == 'Supermarket Type3'])
